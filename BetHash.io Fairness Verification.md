@@ -35,7 +35,7 @@ To learn more about the eos-ecc algo: Elliptic curve cryptography functions: Pri
 
 edition 1:
 golang
-import (
+```import (
     "fmt"
     "crypto/sha256"
 
@@ -52,9 +52,10 @@ func encryptHash(privateKey *ecc.PrivateKey, blockID string) (string, string, er
     sum := sha256.Sum256(signature.Content))
     return fmt.Sprintf("%x", sum), signature.String(), nil
 }
+```
 
 edition 2:
-golang
+```golang
 import (
     "fmt"
     "crypto/sha256"
@@ -72,5 +73,6 @@ func encryptHash(privateKey *ecc.PrivateKey, blockID string) (string, string, er
     sum := sha256.Sum256([]byte(signature.String()))
     return fmt.Sprintf("%x", sum), signature.String(), nil
 }
+```
 
 The public key of our private key is EOS5UY8pMgdSyuy54AWV7i1BQrVkUG75rryQrobMRDDUjZFciPEar
