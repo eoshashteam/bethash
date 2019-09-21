@@ -34,8 +34,8 @@ To learn more about the eos-ecc algo: Elliptic curve cryptography functions: Pri
 
 
 edition 1:
-golang
-```import (
+```golang
+import (
     "fmt"
     "crypto/sha256"
 
